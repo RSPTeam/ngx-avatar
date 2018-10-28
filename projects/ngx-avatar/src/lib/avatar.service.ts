@@ -1,10 +1,10 @@
-import { Observable } from "rxjs";
-import { HttpClient } from "@angular/common/http";
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
-import { AVATAR_CONFIG } from "./avatar-config.token";
-import { AvatarConfig } from "./avatar-config";
-import { Injectable, Inject, Optional } from "@angular/core";
-import { AvatarSource } from "./sources/avatar-source.enum";
+import { AVATAR_CONFIG } from './avatar-config.token';
+import { AvatarConfig } from './avatar-config';
+import { Injectable, Inject, Optional } from '@angular/core';
+import { AvatarSource } from './sources/avatar-source.enum';
 
 /**
  * list of Supported avatar sources
@@ -26,14 +26,14 @@ const defaultSources = [
  * list of default colors
  */
 const defaultColors = [
-  "#1abc9c",
-  "#3498db",
-  "#f1c40f",
-  "#8e44ad",
-  "#e74c3c",
-  "#d35400",
-  "#2c3e50",
-  "#7f8c8d"
+  '#1abc9c',
+  '#3498db',
+  '#f1c40f',
+  '#8e44ad',
+  '#e74c3c',
+  '#d35400',
+  '#2c3e50',
+  '#7f8c8d'
 ];
 
 /**
@@ -62,7 +62,7 @@ export class AvatarService {
 
   public getRandomColor(avatarText: string): string {
     if (!avatarText) {
-      return "transparent";
+      return 'transparent';
     }
     const asciiCodeSum = this.calculateAsciiCode(avatarText);
     return this.avatarColors[asciiCodeSum % this.avatarColors.length];
@@ -97,7 +97,7 @@ export class AvatarService {
 
   private calculateAsciiCode(value: string): number {
     return value
-      .split("")
+      .split('')
       .map(letter => letter.charCodeAt(0))
       .reduce((previous, current) => previous + current);
   }
@@ -105,5 +105,4 @@ export class AvatarService {
   private getSourcePriority(sourceType: AvatarSource) {
     return this.avatarSources.indexOf(sourceType);
   }
-
 }

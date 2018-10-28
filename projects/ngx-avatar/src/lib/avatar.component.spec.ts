@@ -1,18 +1,18 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AvatarComponent } from "./avatar.component";
-import { SourceFactory } from "./sources/source.factory";
-import { AvatarService } from "./avatar.service";
+import { AvatarComponent } from './avatar.component';
+import { SourceFactory } from './sources/source.factory';
+import { AvatarService } from './avatar.service';
 
 const AvatarServiceStub = {
-  getSourcePriority: jasmine.createSpy("avatarService.getSourcePriority"),
-  isSource: jasmine.createSpy("avatarService.isSource"),
-  isTextAvatar: jasmine.createSpy("avatarService.isTextAvatar"),
-  getRandomColors: jasmine.createSpy("avatarService.getRandomColors"),
-  fetchAvatar: jasmine.createSpy("avatarService.fetchAvatar")
+  getSourcePriority: jasmine.createSpy('avatarService.getSourcePriority'),
+  isSource: jasmine.createSpy('avatarService.isSource'),
+  isTextAvatar: jasmine.createSpy('avatarService.isTextAvatar'),
+  getRandomColors: jasmine.createSpy('avatarService.getRandomColors'),
+  fetchAvatar: jasmine.createSpy('avatarService.fetchAvatar')
 };
 
-describe("AvatarComponent", () => {
+describe('AvatarComponent', () => {
   let component: AvatarComponent;
   let fixture: ComponentFixture<AvatarComponent>;
 
@@ -32,7 +32,7 @@ describe("AvatarComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
