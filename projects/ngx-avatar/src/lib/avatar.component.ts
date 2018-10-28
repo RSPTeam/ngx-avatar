@@ -131,6 +131,7 @@ export class AvatarComponent implements OnChanges, OnDestroy {
         this.avatarService.isSource(propName) &&
         changes[propName].currentValue
       ) {
+        console.log('yess');
         const currentValue = changes[propName].currentValue;
         this.addSource(AvatarSource[propName.toUpperCase()], currentValue);
       }
