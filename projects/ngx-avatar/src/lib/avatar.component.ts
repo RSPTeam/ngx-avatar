@@ -37,7 +37,7 @@ import { takeWhile, map } from 'rxjs/operators';
   ],
   template: `
     <div (click)="onAvatarClicked()" class="avatar-container" [ngStyle]="hostStyle">
-      <img *ngIf="avatarSrc; else #textAvatar"
+      <img *ngIf="avatarSrc; else textAvatar"
         [src]="avatarSrc"
         [width]="size"
         [height]="size"
